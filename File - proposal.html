@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be Mine?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffebf1;
+        }
+        h1 {
+            color: #ff4081;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+        }
+        .yes-btn {
+            background-color: #ff4081;
+            color: white;
+        }
+        .no-btn {
+            background-color: #ccc;
+            color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will You Be Mine Forever? 💖</h1>
+        <button class="btn yes-btn" onclick="yesClicked()">Yes 💕</button>
+        <button class="btn no-btn" id="noBtn" onmouseover="moveNo()">No 🙈</button>
+    </div>
+
+    <script>
+        function yesClicked() {
+            alert("Yay! I love you! 💖💖💖");
+        }
+
+        function moveNo() {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            document.getElementById('noBtn').style.left = x + 'px';
+            document.getElementById('noBtn').style.top = y + 'px';
+        }
+    </script>
+</body>
+</html>
